@@ -1,0 +1,16 @@
+body{
+    background: radial-gradient(ellipse,rgb(231, 155, 14),blue);
+    font-weight: bold;
+    font-size: larger;
+    font-style: italic;
+    line-height: 10px; 
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    text-align: center;
+color: rgb(17, 173, 40)
+}
+.eleme{
+    border: 10px ridge pink;
+    border-radius: 50px;
+    
+}

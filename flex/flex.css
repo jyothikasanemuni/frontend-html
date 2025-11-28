@@ -1,0 +1,33 @@
+.parent{
+     width: 500px;
+    height: 300px;
+    background-color: aqua;
+   display:flex;
+   flex-wrap: wrap;
+   /* flex-direction: row;  */
+   /* justify-content: space-evenly; */
+   /* flex-flow: column wrap; */
+   /* align-items: start; */
+}
+
+.child{
+    background-color: blue;
+     width: 50px;
+    height: 30px;
+    border: 2px solid;
+    margin: 2px;
+    
+}
+#child1{
+    order:6;
+    align-self: center;
+}
+#child3{
+    order:5;
+}
+#child2{
+    order:1;
+}
+#child4{
+    order:2;
+}

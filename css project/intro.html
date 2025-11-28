@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./intro.css">
+</head>
+<body>
+    <div class="box">
+    <p>It's one of the frontend technology. CSS is used to styling a webpage , not only styling we can align the contet and arrange the html elements.CSS stands for Cascading Style Sheets</p>
+    <P>The word "Cascading" means order of priority when multiple styles are applied to the same element.</P>
+   <h3>CSS History & Versions</h3>
+   <p>CSS1- 1996 - Fonts,colors,backgrounds,box model,selectors<br>
+   CSS2- 1998 - Positioning,Z-index,Media types<br>
+   CSS3 -2000 - Animations,Transitions,flexbox,grid<br>
+   CSS4- Not officially released<br>
+   <p> currently we are using CSS3 version</p>
+   <h2>👾Implementation of CSS/types of CSS</h2>
+   <ol>
+    <li>Inline CSS</li>
+    <li>Internal CSS</li>
+    <li>External CSS</li>
+   </ol>
+
+   <H2>1)INLINE CSS</H2>
+   <P>CSS is written inside the HTML tag using the style attribute.<br>
+<b>Syntax:</b>&lt;h1 style="color:blue;"&gt;Inline CSS&lt;\h1&gt;</P>
+<p><B>Advantage:</B>Easy and quick to apply for single elements.<br>
+<b>Disadvantage: </b>Not reusable and hard to maintain for large websites. </p>
+
+<h2>2)INTERNAL CSS</h2>
+<p>We can write the css code inside of style tag it should be placed inside the head tag.</p>
+<p><b>Syntax: </b><br>&lt;head&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;style&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;h1{<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Color:white;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;background-color:red;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/style&gt;<br>&lt;/head&gt;</p>
+<p><b>Advantage: </b>Styles multiple elements in the same page<br><b>Disadvantage: </b>Works only for that single HTML page (not reusable across many pages)</p>
+<h2>3)EXTERNAL CSS</h2>
+<P>CSS is written in a separate file (with .css extension) and linked using the &lt;link&gt; tag.</P>
+<p><b>Syntax: </b>&lt;link rel="stylesheet" href="./style.css"&gt;</p>
+<p><b>Advantage: </b>External CSS keeps code clean,reusable, consistent across pages, and improves performanvce with caching.<br><b>Disadvantage: </b>Requires exttra file load, can delay rendering and if the file is missing the page looks unstyled.</p>
+<h3>Priorities: </h3>
+<p>Inline hhas most priority than internal and external<br>High--> Low<br>Inline --> Internal --> External.</p>
+</div>
+</body>
+</html>

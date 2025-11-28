@@ -1,0 +1,26 @@
+div{
+    width: 100px;
+    height: 100px;
+    border: 2px solid;
+    margin: 2px;
+}
+.static{
+    background-color: aqua;
+    position: static;
+    bottom: 200px;
+}
+
+/* .sticky{
+    background-color: blue;
+    position: sticky;
+    left: 30px;
+} */
+p{
+    z-index: 12;
+    position: relative;
+}
+.fixed{
+    background-color: aquamarine;
+    position: fixed;
+    z-index: 12;
+}

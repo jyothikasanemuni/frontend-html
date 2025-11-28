@@ -1,0 +1,16 @@
+body{
+    background-color: black;
+    color: white;
+}
+nav{
+    background-color: aqua;
+}
+
+@media (orientation:landscape) {
+   body{
+    background-color: blue;
+   }
+    nav{
+        background-color: pink;
+    }
+}

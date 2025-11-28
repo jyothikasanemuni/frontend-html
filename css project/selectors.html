@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./selectors.css">
+</head>
+<body><h3>
+    <div class="box">
+    <h1>Selectors</h1>
+    <p>A selector is used in CSS to select and style HTML elements.It tells the browser which elements the CSS rules should apply to.</p>
+    <h3>Types of Selectors</h3>
+    <ol>
+        <li>Basic Selectors</li>
+        <li>Combinator (Combination) Selectors</li>
+        <li>Pseudo Selectors</li>
+    </ol>
+    <h2>1) BASIC SELECTORS</h2>
+    <p><b>a) Tag (Element) Selector</b><br>Selects all elements by tag name.</p>
+    <p><b>Syntax: </b><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;tagname {<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;property:value;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</p>
+    <p>Example: <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;p{<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;color:blue;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<p style="color: blue;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos, consequatur.</p>
+    
+    <P><b>b) Class Selector(.)</b><br>Selects elements with a specific class name (use a dot .)<br><P><b>Syntax: </b><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.classname {<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;property:color;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</P><p>Example: <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.text{<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;color:blue;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}
+
+    <P><b>c) ID Selector(#)</b><br>Selects a single element with a specific ID (use a hash #).<br><b>Syntax: </b><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;#idname {<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;property:value;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</P><p>Example: <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;#text{<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;color:blue;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}
+
+    <p><b>d) Group Selector(,)</b><br>Groups multiple selectors to apply the same styles.<br><b>Syntax:</b><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;selector1,selector2 {<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;propert:value;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</p><p>Example: <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;h1,h2,p{<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;color:blue;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}
+
+    <P><B>e) Universal Selector(*)</B><br>Selects all elements in the HTML document.<br><b>Syntax: </b><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;* {<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;property:value:<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</P><p>Example: <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;* {<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;color:blue;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}
+
+<h2 style="text-transform: uppercase;">2) Combinator (Combination) Selectors</h2>
+
+        <p><b>a) Descendant Selector (Space)</b><br>Selects all direct and indirect children for styling.<br><b>Syntax: </b><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;parent child {<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;property:value;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</p> <p>Example: <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.parent p{<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;background-color:blue;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}
+
+        <p><b>b) Child Selector ( > )</b><br>Selects direct child elements of a parent.<br><b>Syntax: </b><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;parent>child {<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;property:value;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</p> <p>Example: <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.parent p{<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;background-color:blue;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}
+        
+        <P><b>c) Adjacent Sibling Selector ( + )</b><br>Selects an element that is immediately next to another element.<br><b>Syntax: </b><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;element1+element2 {<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;property:value;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</p>  <p>Example: <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;h1 + p {<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;background-color:blue;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}
+        
+        <p><b>d) General Sibling Selector ( ~ )</b><br>Selects all elements that are siblings of a specified element.<br><b>Syntax: </b><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;element1 ~ element2 {<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;property:value;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</p>  <p>Example: <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;h1 ~ p {<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;background-color:blue;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</p>
+
+<h1>3)Pseudo Selectors </h1>
+<p>There are two types: <ul>
+    <li>Pseudo-class selectors(:)</li>
+    <li>pseudo-element selectors(::)</li>
+</ul></p>
+    <h3>A) Pseudo-Class Selectors (:)</h3>
+        <p><b>:Hover</b><br>styles element mouse hovers over an element<br><p>Example: <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;button:hover {<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;background-color:green;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</p>
+
+        <p><b>:link</b><br>A pseudo-class that selects all unvisited links<br><p>Example: <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;a:link {<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;color:red;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</p>
+
+        <p><b>:active</b><br>styles element when it is being clicked<br><p>Example: <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;a:active {<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;color:red;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</p>
+    
+         <p><b>:visited</b><br>Styles links after they are visited<br><p>Example: <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;a:visited {<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;color:purple;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</p>
+
+         <p><b>:focus</b><br>Styles input when focused (clicked/tabbed)<br><p>Example: <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;input:focus {<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;border: 2px solid blue;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</p>
+
+         <p><b>:checked</b><br>Selects checked inputs<br><p>Example: <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;input:checked {<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;background-color:yellow;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</p>
+
+         <p><b>:first-child</b><br>Selects the first child element inside a parent.<br><p>Example: <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;p:first-child {<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;color:violet;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</p>
+
+         <p><b>:last-child</b><br>Selects the last child element inside a parent.<br><p>Example: <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;p:last-child {<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;color:lightgreen;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</p>
+
+         <p><b>:nth-child(n)</b><br>Selects nth child.<br><p>Example: <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;p:nth-child(3) {<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;color:blue;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</p>
+
+         <p><b>:nth-of-type(n)</b><br>A pseudo-class that selects the nth element of its type (like the 2nd &lt;p&gt;, 3rd &lt;li&gt;, etc..) inside its parent.<br><p>Example: <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;p:nth-of-type(2) {<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;color:orange;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</p>
+
+<h3>B) Pseudo-Element selectors(::)</h3>
+
+        <p><b>::first-letter</b><br>Styles the first letter of a block element.<br><p>Example: <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;p::first-letter {<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;font-size: 30px;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</p>
+
+        <p><b>::first-line</b><br>Styles the first line of a block element.<br><p>Example: <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;p::first-line {<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;color: green;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</p>
+
+        <p><b>::before</b><br>Inserts generated content before an element.<br><p>Example: <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;p::before {<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;content: "😏";<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</p>
+
+        <p><b>::after</b><br>Inserts generated content after an element.<br><p>Example: <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;p::after {<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;content: "😎";<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</p>
+
+        <p><b>::selection</b><br>Styles the text when it is highlighted (selected)<br><p>Example: <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;::selection {<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;background-color:yellow; color: black;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</p></h3>
+     </div>
+</body>
+</html>

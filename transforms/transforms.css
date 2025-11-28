@@ -1,0 +1,31 @@
+div{
+    /* width:200px;
+    height: 200px;
+    border:2px solid green; */
+    /* margin: auto; */
+    /* transform:rotate(230deg);
+    transform:rotateX(120deg);
+    transform:rotateY(120deg); */
+    /* transform: scale(1.2);
+    transform: scaleX(1.2);
+    transform: scaleY(1.2); */
+    /* transform: skew(230deg);
+    transform: skewX(230deg);
+    transform: skewY(230deg); */
+    /* transform:translateX(200PX);
+    transform:translateY(203PX); */
+    /* transform: translate(50px,100px); */
+    /* transform:matrix(1, 2, 5, 2, 2,3); */
+   
+}
+div1{
+    width:200px;
+    height: 200px;
+    border:2px solid red;
+    background-color: blue;
+     /* transition-property: all;
+    transition-duration: 10s;
+    transition-delay: 1s;
+    transition-timing-function:cubic-bezier(.37,.72,.57,.12); */
+    /* transition: all 5s 10s ease ; */
+}

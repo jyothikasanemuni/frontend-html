@@ -1,0 +1,64 @@
+
+body{
+    background:radial-gradient(ellipse,white,black,black);
+}
+
+#cssimg{
+    width:300px;
+    height: 450px;
+    border: 2px solid black;
+    border-radius: 10px;
+    margin: 50px;
+   background: linear-gradient(135deg,black,black,white, #e39dcf, #a6c1ee);
+}
+#intro{
+    width:300px;
+    height: 450px;
+    border: 2px solid black;
+    border-radius: 10px;
+    margin: 50px;
+    background: linear-gradient(135deg, #e39dcf, #a6c1ee,white,black);
+}
+#selectors{
+     width:300px;
+    height: 450px;
+    border: 2px solid black;
+    border-radius: 10px;
+    margin: 50px;
+background: linear-gradient(135deg,black,black,white, #e39dcf, #a6c1ee);
+}
+#boxmodel{
+    width:300px;
+    height: 450px;
+    border: 2px solid black;
+    border-radius: 10px;
+    margin: 50px;
+    background: linear-gradient(135deg, #e39dcf, #a6c1ee,white,black);
+}
+#colortheory{
+    width:300px;
+    height: 450px;
+    border: 2px solid black;
+    border-radius: 10px;
+    margin: 50px;
+    background: linear-gradient(135deg,black,white, #e39dcf, #a6c1ee);
+
+}
+#typography{
+    width:300px;
+    height: 450px;
+    border: 2px solid black;
+    border-radius: 10px;
+    margin: 50px;
+    background: linear-gradient(135deg, #e39dcf, #a6c1ee,white,black);
+}
+.display{
+    display: flex;
+    flex-wrap: nowrap;
+    
+
+}
+.flex{
+    display: flex;
+    flex-wrap: nowrap;
+}

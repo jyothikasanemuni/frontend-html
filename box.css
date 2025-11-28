@@ -1,0 +1,17 @@
+.box{
+  background: linear-gradient(135deg, #ff9966, #3750dd);
+  color: white;
+  padding: 20px;
+  border-radius: 15px;
+  width: 250px;
+  text-align: center;
+  margin: 20px auto;
+}
+.card{
+  width: 750px;
+  height: 1000px;
+  border: 3px;
+  border-radius: 20px;
+  background: linear-gradient(135deg, #a565f4, #f31957);
+  margin: auto;
+}

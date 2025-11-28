@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>EduCareer Portal</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+        display: flex;
+        height: 100vh;
+        background: linear-gradient(135deg, #e3f2fd, #f3e5f5);
+        color: #333;
+        overflow: hidden;
+    }
+
+    /* Splash Screen */
+    #splash {
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(135deg, #6a11cb, #2575fc);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        font-size: 32px;
+        font-weight: 600;
+        animation: fadeOut 1s ease 4s forwards;
+        z-index: 10;
+    }
+
+    @keyframes fadeOut {
+        to { opacity: 0; visibility: hidden; }
+    }
+
+    /* Login Page */
+    #login-page {
+        display: none;
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(135deg, #ab47bc, #7e57c2);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 5;
+    }
+
+    .login-box {
+        background: white;
+        border-radius: 15px;
+        padding: 30px;
+        width: 320px;
+        box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+        text-align: center;
+    }
+
+    .login-box h2 {
+        color: #4a148c;
+        margin-bottom: 20px;
+    }
+
+    .login-box input {
+        width: 100%;
+        padding: 10px;
+        margin: 10px 0;
+        border-radius: 8px;
+        border: 1px solid #ccc;
+    }
+
+    .login-box button {
+        width: 100%;
+        padding: 10px;
+        border: none;
+        border-radius: 8px;
+        background: linear-gradient(135deg, #6a11cb, #2575fc);
+        color: white;
+        font-weight: 600;
+        cursor: pointer;
+        margin-top: 10px;
+    }
+
+    .login-box button:hover {
+        background: linear-gradient(135deg, #5a0fbf, #1f65e5);
+    }
+
+    .toggle-text {
+        margin-top: 10px;
+        font-size: 14px;
+        color: #666;
+        cursor: pointer;
+    }
+
+    /* Sidebar */
+    .sidebar {
+        width: 80px;
+        background: linear-gradient(135deg, #6a11cb, #2575fc);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 25px;
+        padding: 20px 0;
+        position: relative;
+        display: none;
+    }
+
+    .sidebar a {
+        color: white;
+        text-decoration: none;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+        transition: transform 0.2s ease;
+    }
+
+    .sidebar a:hover {
+        transform: scale(1.08);
+    }
+
+    .sidebar i {
+        font-size: 24px;
+        margin-bottom: 5px;
+    }
+
+    .sidebar span {
+        position: absolute;
+        left: 70px;
+        background: rgba(255, 255, 255, 0.95);
+        color: #333;
+        padding: 4px 8px;
+        border-radius: 5px;
+        white-space: nowrap;
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity 0.25s ease, left 0.25s ease;
+        box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+        font-size: 13px;
+    }
+
+    .sidebar a:hover span {
+        opacity: 1;
+        left: 85px;
+    }
+
+    /* Main content */
+    .main-content {
+        flex-grow: 1;
+        display: none;
+        flex-direction: column;
+        background: white;
+        border-top-left-radius: 25px;
+        border-bottom-left-radius: 25px;
+        padding: 20px;
+        overflow-y: auto;
+    }
+
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 30px;
+        background: linear-gradient(135deg, #ab47bc, #7e57c2);
+        color: white;
+        border-radius: 15px;
+    }
+
+    header .logo {
+        font-size: 24px;
+        font-weight: 600;
+    }
+
+    header nav a {
+        margin-left: 20px;
+        color: white;
+        text-decoration: none;
+        font-weight: 500;
+        transition: color 0.3s ease;
+    }
+
+    header nav a:hover {
+        color: #ffd54f;
+    }
+
+    .content {
+        margin-top: 30px;
+        text-align: center;
+    }
+
+    .content h1 {
+        color: #4a148c;
+        margin-bottom: 15px;
+    }
+
+    .content p {
+        color: #555;
+    }
+</style>
+</head>
+<body>
+
+    <!-- Splash Screen -->
+    <div id="splash">Welcome to EduCareer</div>
+
+    <!-- Login Page -->
+    <div id="login-page">
+        <div class="login-box">
+            <h2 id="login-title">Login</h2>
+            <input type="text" id="username" placeholder="Username" required>
+            <input type="password" id="password" placeholder="Password" required>
+            <button id="login-btn">Login</button>
+            <div class="toggle-text" id="toggle-form">Don't have an account? Sign up</div>
+        </div>
+    </div>
+
+    <!-- Sidebar -->
+    <div class="sidebar" id="sidebar">
+        <a href="#" data-section="resume"><i class="fas fa-file-alt"></i><span>Resume Builder</span></a>
+        <a href="#" data-section="notes"><i class="fas fa-book"></i><span>Notes</span></a>
+        <a href="#" data-section="interview"><i class="fas fa-briefcase"></i><span>Interview Bank</span></a>
+        <a href="#" data-section="roadmaps"><i class="fas fa-route"></i><span>Roadmaps</span></a>
+        <a href="#" data-section="videos"><i class="fas fa-video"></i><span>Videos</span></a>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content" id="main-content">
+        <header>
+            <div class="logo">EduCareer</div>
+            <nav>
+                <a href="#" id="logout-btn">Logout</a>
+            </nav>
+        </header>
+        <div class="content" id="content-area">
+            <h1>Welcome to EduCareer Portal</h1>
+            <p>Select a section from the sidebar to begin exploring.</p>
+        </div>
+    </div>
+
+<script>
+    // Splash screen logic
+    setTimeout(() => {
+        document.getElementById('splash').style.display = 'none';
+        document.getElementById('login-page').style.display = 'flex';
+    }, 5000);
+
+    const loginBtn = document.getElementById("login-btn");
+    const toggleForm = document.getElementById("toggle-form");
+    const loginTitle = document.getElementById("login-title");
+
+    let isSignup = false;
+
+    toggleForm.onclick = () => {
+        isSignup = !isSignup;
+        loginTitle.textContent = isSignup ? "Sign Up" : "Login";
+        loginBtn.textContent = isSignup ? "Register" : "Login";
+        toggleForm.textContent = isSignup
+            ? "Already have an account? Login"
+            : "Don't have an account? Sign up";
+    };
+
+    loginBtn.onclick = () => {
+        const username = document.getElementById("username").value.trim();
+        const password = document.getElementById("password").value.trim();
+
+        if (!username || !password) {
+            alert("Please enter all details.");
+            return;
+        }
+
+        if (isSignup) {
+            localStorage.setItem(username, password);
+            alert("Account created successfully! Please log in.");
+            toggleForm.click();
+        } else {
+            const storedPass = localStorage.getItem(username);
+            if (storedPass === password) {
+                document.getElementById("login-page").style.display = "none";
+                document.getElementById("sidebar").style.display = "flex";
+                document.getElementById("main-content").style.display = "flex";
+            } else {
+                alert("Invalid credentials! Please try again.");
+            }
+        }
+    };
+
+    document.getElementById("logout-btn").onclick = () => {
+        document.getElementById("sidebar").style.display = "none";
+        document.getElementById("main-content").style.display = "none";
+        document.getElementById("login-page").style.display = "flex";
+    };
+
+    // Sidebar navigation
+    const contentArea = document.getElementById("content-area");
+    document.querySelectorAll(".sidebar a").forEach(link => {
+        link.addEventListener("click", e => {
+            e.preventDefault();
+            const section = e.currentTarget.getAttribute("data-section");
+            loadSection(section);
+        });
+    });
+
+    function loadSection(section) {
+        switch (section) {
+            case "resume":
+                contentArea.innerHTML = "<h1>Resume Builder</h1><p>Build your professional resume here.</p>";
+                break;
+            case "notes":
+                contentArea.innerHTML = "<h1>Notes</h1><p>Access all your study materials and notes here.</p>";
+                break;
+            case "interview":
+                contentArea.innerHTML = "<h1>Interview Bank</h1><p>Practice interview questions and cheatsheets.</p>";
+                break;
+            case "roadmaps":
+                contentArea.innerHTML = "<h1>Learning Roadmaps</h1><p>Explore curated tech learning paths.</p>";
+                break;
+            case "videos":
+                contentArea.innerHTML = "<h1>Videos</h1><p>Watch helpful tutorials from YouTube.</p>";
+                break;
+        }
+    }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,48 @@
+.sub{
+    width:200px;
+    height: 200px;
+border: 2px solid;
+margin: 35px auto;
+}
+.inner{
+    width: 100px;
+    height: 100px;
+    border: 2px solid;
+    border-radius: 50%;
+    margin: auto;
+}
+.main{
+    display: flex;
+    flex-wrap: wrap;
+}
+#colorname{
+    background-color: brown;
+}
+#hexa{
+    background-color: #a9f2e6;
+}
+#rgb{
+    background-color: rgb(200,23,255);
+}
+#rgba{
+    background-color: rgba(123,56,98,0.4);
+}
+#hsl{
+    background-color: hsl(1236324557689,50%,45%);
+}
+#hsla{
+    background-color: hsla(3456239423,39%,53%,0.7);
+}
+#lineargradient{
+    background:linear-gradient(to top,purple,indigo,navy,green,yellow,orange,red);
+}
+#repatinglg{
+    /* background:repeating-linear-gradient(to top,#F4E8C1 2px,#A0C1B8 4px,#726A95 5px,#351F39 3px); */
+    background: repeating-linear-gradient(to top,white 9px,black 19px);
+}
+#radialgradient{
+    background: radial-gradient(farthest-side,red,orange,yellow,green,navy,indigo,violet);
+}
+#repatingrg{
+    background: repeating-radial-gradient(closest-side at 2px 10px,red,black);
+}

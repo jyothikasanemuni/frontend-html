@@ -1,0 +1,8 @@
+.box{
+        border:20px outset rgb(91, 44, 61);
+        padding-left: 30px;
+        background: linear-gradient(to left,rgb(236, 228, 228),skyblue,blue);
+        color:black;
+        margin: 20px 200px 20px 200px;
+        box-shadow:  20px 20px 200px 10px;
+}
